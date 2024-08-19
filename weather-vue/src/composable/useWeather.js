@@ -18,7 +18,7 @@ export default function useWeather() {
         try {
             
             // Obtener Latitud y Longitud
-            const urlLatLong = `http://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${apiKey}`;
+            const urlLatLong = `https://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${apiKey}`;
             const { data } = await axios(urlLatLong);
             const { lat, lon } = data[0];
 
